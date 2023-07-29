@@ -1,0 +1,35 @@
+
+div {
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2em;
+    text-decoration: underline;
+
+}
+
+
+h2 {
+    font-size: 1.5em;
+    @apply underline 
+}
+
+h3 {
+    font-size: 1.17em;
+    @apply mb-2 
+}
+
+code {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+}
+
+
+/* show code in a card      */
+pre {
+    @apply p-2 m-2 bg-gray-700 rounded-lg shadow-lg;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1em;
+    overflow-x: auto;
+}
