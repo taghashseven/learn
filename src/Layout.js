@@ -18,12 +18,12 @@ const Layout = ()=>{
                 <Markdown className='markdown ' />
             </div>
             <div className='side max-md:hidden'>
-                <ul>
+                {/* <ul>
                     <li>javascript</li>
                     <li>functions</li>
                     <li>classs </li>
                     <li>inherietance</li>
-                </ul>
+                </ul> */}
             </div>
         </div>
     )

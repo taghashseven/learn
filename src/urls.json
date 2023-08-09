@@ -1,0 +1,37 @@
+{
+    "pwa" : [
+        "Notes/pwa/designPrinciples.md",
+        "Notes/pwa/introduction.md", 
+        "Notes/pwa/service_worker.md"
+    ] , 
+
+    "python" : [
+        "Notes/python/class.md" ,
+        "Notes/python/collections.md" ,
+        "Notes/python/constants.md" ,
+        "Notes/python/designPattern.md" ,
+        "Notes/python/docstring.md" ,
+        "Notes/python/ErrorHanding.md" ,
+        "Notes/python/File.md" ,
+        "Notes/python/introduction.md" ,
+        "Notes/python/libs.md" ,
+        "Notes/python/operatorOverloading.md" ,
+        "Notes/python/packages.md" ,
+        "Notes/python/pythotonic.md" ,
+        "Notes/python/regularExpression.md" ,
+        "Notes/python/test.md" ,
+        "Notes/python/typeHints.md" ,
+        "Notes/python/unitTesting.md" ,
+        "Notes/python/unpacking.md" 
+
+
+    ] , 
+
+    "React" : [
+        "Notes/React/Redux.md" 
+    ] , 
+    "typescript" : [
+        "Notes/typescript/designPatterns.md" 
+    ] 
+
+}

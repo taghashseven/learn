@@ -2,28 +2,32 @@ import React from "react";
 import { XCircleIcon } from "@heroicons/react/24/solid";
 import { useDispatch } from "react-redux";  
 import { closeDrawer } from "../store/stateSlice";
+import Links from '../urls.json'
+import { useLocation , Link , } from "react-router-dom";
 
 const Drawer = (props)=>{
 
     const dispatch = useDispatch()
+    let location = useLocation().pathname.match(/\/(.*)\//)?.[1]
+    console.log(location , 'location ') 
+    // "Notes/python/collection.md" ,
+    let pattern = /^Notes\/.*\/(.*)\.md/  ;
 
-    const links = {
-            pwa : [
-                'designPrinciples.md', 
-                'introduction.md',
-                'service_worker.md',
-            ]
-    }
+   
 
     return (
-        <div className={"" + " " +props.className } >
-            <XCircleIcon className="w-5 h-6 md:hidde float-right m-1 " onClick={()=>dispatch(closeDrawer())}/>
+
+        <div className={" max-md:w-4/5" + " " +props.className } >
+            <XCircleIcon className="w-5 h-6 md:hidden float-right m-1 " onClick={()=>dispatch(closeDrawer())}/>
             <ul className="clear-both ">
                 {
-                     links.pwa.map((link, index)=>{
+                     Links[location].map((link, index)=>{
+                        console.log(link)
                         return (
-                            <li key={index} className="px-2 bg-fade-100 mx-4 mb-2  hover:bg-gray-500 ">
-                                <a href={"/"+link} className="block py-2 px-4 text-white hover:text-white">link</a>
+                            <li key={index} className="px-2 bg-fade-100 mx-4 mb-1  hover:bg-gray-500 ">
+                                <Link to={"/"+location +"/" +link.match(pattern)[1]} 
+                                className={"block  px-4 text-white hover:text-white rounded " + " " +(link.match(location) ? "" : ' ') }>
+                                    {link.match(pattern)[1]}</Link>
                             </li>
                         )
                     })
