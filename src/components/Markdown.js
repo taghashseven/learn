@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from 'react-markdown';
+import { CodeBlock } from "./CodeBlocks";
 import './Markdown.css';
 
 const Markdown = (props) => {
@@ -8,7 +9,7 @@ const Markdown = (props) => {
   useEffect(() => {
     const fetchMarkdown = async () => {
       try {
-        const response = await fetch(`./Redux.md`);
+        const response = await fetch(`/Notes/pwa/introduction.md`);
         const text = await response.text();
         setMarkdownText(text);
       } catch (error) {
@@ -21,7 +22,7 @@ const Markdown = (props) => {
 
   return (
     <div className={" w-full p-2" + " "+props.className}>
-      <ReactMarkdown>{markdownText}</ReactMarkdown>
+      <ReactMarkdown  renderers={{ code: CodeBlock }}  >{markdownText}</ReactMarkdown>
     </div>
   );
 }

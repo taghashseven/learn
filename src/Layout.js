@@ -13,7 +13,8 @@ const Layout = ()=>{
         <div className=' layout'>
             <Nav className='nav bg-green-200 header'/>
             <Drawer className={'drawer bg-fade-200  border-r-[1px] border-white'+ " "+ (isDrawerOpen ? " " : "max-md:hidden ")}/>
-            <div className='main w-full'> 
+            <div className='main pre-wrapper' > 
+                {/* <Markdown className='markdown ' /> */}
                 <Markdown className='markdown ' />
             </div>
             <div className='side max-md:hidden'>
@@ -29,3 +30,4 @@ const Layout = ()=>{
 }
 
 export default Layout
+

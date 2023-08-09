@@ -7,6 +7,7 @@ const stateSlice = createSlice({
   name: 'nav',
   initialState : {
     isDrawerOpen: false, 
+    url : '/'
   } ,
   reducers: {
     toggleDrawer: (state) => {
@@ -17,10 +18,13 @@ const stateSlice = createSlice({
     } , 
     openDrawer: (state) => {
       state.isDrawerOpen = true;
+    } , 
+    
+    setUrl : (state , action)=>{
+      state.url = action.payload
     }
-
   },
 });
 
-export const { toggleDrawer , closeDrawer , openDrawer} = stateSlice.actions;
+export const { toggleDrawer , closeDrawer , openDrawer , setUrl} = stateSlice.actions;
 export default stateSlice.reducer;

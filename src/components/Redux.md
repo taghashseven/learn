@@ -1,6 +1,4 @@
-[
-  `
-  ## Redux 
+## Redux 
 
 ### code example of using redux toolkit
 
@@ -80,5 +78,3 @@ function App() {
 export default App;
 
 ```
-  `
-]
