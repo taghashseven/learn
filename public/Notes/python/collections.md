@@ -12,21 +12,22 @@
 
  # dict 
 
-    ```python
-    student = {
-        'name': 'john',
-        'age': 20,
-        'courses': ['math', 'science']
-    }
-    print(student['name'])
-    print(student.get('name'))
-    print(student.get('phone', 'not found'))
-    ```
+```python
+student = {
+    'name': 'john',
+    'age': 20,
+    'courses': ['math', 'science']
+}
+print(student['name'])
+print(student.get('name'))
+print(student.get('phone', 'not found'))
+```
 
-    - dict are mutable
-    - dict are unordered
-    - dict is iterable
-    - when iterating over a dict, you iterate over the keys
+- dict are mutable
+- dict are unordered
+- dict is iterable
+- when iterating over a dict, you iterate over the keys
+```
 
 ## set 
 

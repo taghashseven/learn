@@ -3,14 +3,17 @@ import ReactMarkdown from 'react-markdown';
 import { CodeBlock } from "./CodeBlocks";
 import { useLocation } from "react-router-dom";
 import './Markdown.css';
+import remarkGfm from 'remark-gfm'
+import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
+import {vscDarkPlus} from 'react-syntax-highlighter/dist/esm/styles/prism'
+
+
 
 const Markdown = (props) => {
   const [markdownText, setMarkdownText] = useState('');
 
-  //  
   let location = useLocation().pathname
 
-  
 
   useEffect(() => {
     const fetchMarkdown = async () => {
@@ -32,8 +35,27 @@ const Markdown = (props) => {
   }, [location]);
 
   return (
-    <div className={" w-full p-2" + " "+props.className}>
-      <ReactMarkdown  renderers={{ code: CodeBlock }}  >{markdownText}</ReactMarkdown>
+    <div className={" w-full p-2 list-disc" +  " "+props.className}>
+      <ReactMarkdown children={markdownText} 
+        remarkPlugins={[remarkGfm]}
+        components={{
+          code({node, inline, className, children, ...props}) {
+            const match = /language-(\w+)/.exec(className || '')
+            return !inline && match ? (
+              <SyntaxHighlighter
+                {...props}
+                children={String(children).replace(/\n$/, '')}
+                style={vscDarkPlus}
+                language={match[1]}
+              />
+            ) : (
+              <code {...props} className={className}>
+                {children}
+              </code>
+            )
+          }
+        }}
+        />
     </div>
   );
 }

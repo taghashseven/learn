@@ -1,21 +1,30 @@
 
 ## what is a service worker? 
-- its runs on its own thread, separate from the main thread of the browser
-- it is a programmable network proxy, it can intercept the request and response
-- it an middleware between the client and the server
-- can run in the background even if the browser is closed 
+ its runs on its own thread, separate from the main thread of the browser
+
+ it is a programmable network proxy, it can intercept the request and response
+
+ it an middleware between the client and the server
+
+ can run in the background even if the browser is closed 
+
 ## requirements 
-- it must be served over https
+
+it must be served over https
 
 ### origin 
-- protocol + hostname + port 
-- the service worker is scoped to the origin
-- the service worker can only control the pages that are in its scope
-- any page can install the service worker 
-- only one service worker is allowed per scope 
-- ther are other changles when it an iframe, lets leave that for other day 
+protocol + hostname + port 
 
-### 
+the service worker is scoped to the origin
+
+the service worker can only control the pages that are in its scope
+
+any page can install the service worker 
+
+only one service worker is allowed per scope 
+
+ther are other changles when it an iframe, lets leave that for other day 
+
 
 ### registering a service worker 
 
@@ -36,14 +45,19 @@ if ('serviceWorker' in navigator) {
 
 ### cache api 
 
-- there are a number of design patterns for caching
-- cache first
-- network first
-- prefetch 
-- app shell pattern 
+there are a number of design patterns for 
 
-- the app shell pattern 
-    - we cache all the resources that are neccessy for the app to render 
+cache first
+
+network first
+
+prefetch 
+
+app shell pattern 
+
+the app shell pattern 
+
+we cache all the resources that are neccessy for the app to render 
 
 
 ## service worker events 

@@ -1,4 +1,5 @@
 # topics
+
 - data types 
 - scope 
 - functions 

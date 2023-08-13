@@ -32,6 +32,23 @@
     ] , 
     "typescript" : [
         "Notes/typescript/designPatterns.md" 
-    ] 
+    ] , 
+
+    "tkinter" : [
+        "Notes/tkinter/layout.md", 
+        "Notes/tkinter/wigets.md"
+    ] ,
+    "tools" : [
+        "Notes/tools/git.md",
+        "Notes/tools/yarn.md"
+    ]  , 
+    "opencv" : [
+        "Notes/opencv/basics.md",
+        "Notes/opencv/imgSize.md",
+        "Notes/opencv/perspectiveTrans.md" , 
+        "Notes/opencv/events.md" ,
+        "Notes/opencv/colordetection.md" ,   
+        "Notes/opencv/threshold.md"    
+    ]  
 
 }
